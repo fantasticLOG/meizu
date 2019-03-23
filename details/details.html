@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/city.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header">
+        <div class="header-cont">
+
+        </div>
+    </div>
+
+    <!-- fast-nav -->
+    <div id="fast-nav">
+        <div class="fast-nav-cont">
+            <span class="fast-name"> 魅族 Note9</span>
+            <ul class="fast-ul">
+                <li><a href="#">概述</a></li>
+                <li><a href="#">参数</a></li>
+                <li><a href="#" class="fast-a">常见问题</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!--container -->
+    <div id="container">
+        <div class="row-container">
+            <div class="preview">
+                <div class="preview-booth">
+                    <img src="../app/images/note9-big.jpg" alt="">
+                </div>
+                <ul class="preview-thumb">
+                    <li><a href="#"><img src="images/note9-1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/note9-2.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/note9-3.jpg" alt=""></a></li>
+                    <li id="pf"><a href="#"><img src="images/note9-4.jpg" alt=""></a></li>
+                </ul>
+                <div class="preview-action">
+                    <a href="#">
+                        <i class="iconfont icon-shoucang"></i>
+                        <p>收藏</p>
+                    </a>
+                    <a href="#">
+                        <i class="iconfont icon-23"></i>
+                        <p>对比</p>
+                    </a>
+                </div>
+            </div>
+            <div class="property">
+                <div class="property-hd">
+                    <h1>魅族 Note9</h1>
+                    <p>现货开售 | 骁龙675 后置4800万</p>
+                </div>
+                <div class="property-sell">
+                    <div class="property-sell-price">
+                        <div class="mod-price">
+                            <small>¥</small>
+                            <span>1398.00</span>
+                        </div>
+                    </div>
+                    <div class="property-sell-morebuy">
+                        <p>加价购</p>
+                        <span>另外再加<em>19</em>元，即可换购超值商品</span>
+                        <a href="#">立即加购 ></a>
+                    </div>
+                </div>
+                <div class="property-service">
+                    <div class="property-service-item">
+                        <span>支&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;持</span>
+                        <ul>
+                            <li><i class="iconfont icon-yuanxing-"></i> 花呗分期</li>
+                            <li><i class="iconfont icon-yuanxing-"></i>顺丰包邮</li>
+                            <li><i class="iconfont icon-yuanxing-"></i>七天无理由退货</li>
+                        </ul>
+                    </div>
+                    <div class="property-service-suda">
+                        <span >配送服务</span>
+                     <!-- 地址未做 -->
+                     <input type="text" id="city" />
+                    </div>
+                    <div class="property-service-provider">
+                        <span> 本商品由 魅族 负责发货并提供售后服务</span>
+                        <a href="#">
+                            <i class="iconfont icon-zaixiankefu-"></i>
+                            <p>在线客服</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="property-sibling">
+                    <dt class="vm-metatit">型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</dt>
+                    <dd class="clearfix">
+                        <a href="#" >魅族 16th</a>
+                        <a href="#" >魅族 16th Plus</a>
+                        <a href="#" >魅族 16 X</a>
+                        <a href="#" >魅族 V8 高配版</a>
+                        <a href="#" >魅族 X8</a>
+                        <a href="#" >魅族 Note9</a>
+                    </dd>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.js"></script>
+<script src="js/cityJson.js"></script>
+<script src="js/citySet.js"></script>
+<script src="js/Popt.js"></script>
+<script type="text/javascript">
+    $("#city").click(function (e) {
+        SelCity(this,e);
+        console.log("inout",$(this).val(),new Date())
+    });
+    </script>
+</html>
