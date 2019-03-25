@@ -55,7 +55,7 @@ width:100%;
     height: 48px;
     margin-top: 20px;
 }
-.main .form input:last-child{
+.main .form #reg{
     background-color: #387aff;
     border: 0;
     cursor: pointer;
@@ -63,7 +63,6 @@ width:100%;
 }
 .f-footer{
     margin-top: 20px;
-    margin-left: 20px;
 }
 .f-footer a{
 color: #387aff;
@@ -81,9 +80,7 @@ color: #387aff;
 float: left;
 font-size: 14px;
 }
-.f-footer a:last-child{
-    margin-left: 200px;
-}
+
 .footer{
     width: 100%;
     height: 131px;
@@ -152,4 +149,83 @@ font-size: 14px;
     height: 32px;
     background-position: -218px -137px;
     margin-right: 15px;
+}
+#checkExistPhone{
+    color: red;
+}
+.word-one{
+    margin-top: 46px;
+}
+#vCode{
+    margin-top: 0;
+    margin-bottom: 26px;
+    line-height: 22px;
+    padding: 12px 0;
+    height: 16px;
+    border: 0;
+    width: 200px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+}
+#vCode-word{
+    width: 154px;
+    height: 50px;
+    padding-left: 6px;
+    line-height: 50px;
+    color: #387aff;
+    cursor: pointer;
+}
+#code-box{
+    margin-top: 46px;
+    width: auto;
+    font-size: 14px;
+    display: block;
+    height: 46px;
+    line-height: 46px;
+    position: relative;
+    border: 1px solid #dadada;
+    outline: none;
+    color: #474747;
+}
+.form-line{
+    color: #d9d9d9;
+    height: 40px;
+    display: inline-block;
+    border-left: 1px solid #dadada;
+    position: absolute;
+    right: 140px;
+    top: 5px;
+}
+#next-one{
+    background: #387aff;
+    border: 0;
+    margin-left: 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 2%;
+}
+.word-two{
+    margin-top: 36px;
+}
+#password{
+    border: 1px solid #ccc;
+    border-radius: 2%;
+    width: 278px;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+#sub{
+    background: #387aff;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2%;
+    margin-left: 20px;
+    color: white;
+}
+.pwd-box{
+    display: none;
+}
+.vCode-box{
+    display: none;
 }

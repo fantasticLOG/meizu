@@ -20,13 +20,14 @@
                     <span>｜</span>
                     <a href="">二维码登录</a>
                 </div>
-                <form action="" method="POST">
-                    <input type="text" name="uname" placeholder="邮箱/Flyme号码"><br>
-                    <input type="text" name="pwd" placeholder="密码"><br>
+                <form action="php/login.php" method="POST" id="signupForm">
+                    <input type="text" id="uname" name="uname" placeholder="邮箱/Flyme号码">
+                    <br>
+                    <input type="text" id="pwd" name="pwd" placeholder="密码"><br>
                     <input type="submit" value="登录">
                 </form>
                 <div class="f-footer">
-                    <a href="">注册</a>
+                    <a href="register.html">注册</a>
                     <a href="">忘记密码？</a>
                 </div>
             </div>
@@ -57,9 +58,15 @@
                 </div>
                 <div class="list-three">
                     <ul>
-                        <a href="" class="one-a"><li class="list-weibo"></li></a>
-                        <a href=""><li class="list-weixin"></li></a>
-                        <a href=""><li class="list-qzone"></li></a>
+                        <a href="" class="one-a">
+                            <li class="list-weibo"></li>
+                        </a>
+                        <a href="">
+                            <li class="list-weixin"></li>
+                        </a>
+                        <a href="">
+                            <li class="list-qzone"></li>
+                        </a>
                     </ul>
                 </div>
                 <div>
@@ -68,6 +75,10 @@
             </div>
         </div>
     </div>
+    <script src="jquery.min.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>

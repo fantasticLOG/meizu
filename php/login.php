@@ -1,0 +1,11 @@
+<?php
+$uname=$_POST["uname"];
+$pwd=$_POST["pwd"];
+$coon=mysqli_connect("localhost","root","","k");
+$result=mysqli_query($coon,$selectsql);
+if($result){
+    echo"<script>alert('登录成功');location.href='../home.html';</script>";
+}else{
+    echo"<script>alert('登录失败');location.href='login.html';</script>";
+}
+?>

@@ -16,57 +16,92 @@
         <div class="main">
             <div class="form">
                 <div class="f-header">
-                    
+
                     <span>注册Flame账号</span>
-                    
+
                 </div>
-                <form action="" method="POST">
-                    <input type="text" name="uname" placeholder="手机号码"><br>
-                    <input type="button" value="点击按钮进行验证" style="color: #666">
-                    <input type="submit" value="注册">
+                <form action="php/register.php" method="POST" class="form-box">
+                    <input type="text" id="telephone" name="telephone" placeholder="手机号码" data-error="手机号格式不正确"><br>
+                    <span class="checkExistRong" id="checkExistPhone"></span>
+                    <input type="button" id="btn" value="点击按钮进行验证" style="color: #666">
+                    <input type="button" id="reg" value="注册">
                 </form>
+                <div class="vCode-box">
+                    <h5 class="word-one">我们已发送一条验证码至<span class="tel"></span>，请输入短信中的验证码</h3>
+                        <div id="code-box">
+                            <input type="text" id="vCode" name="vCode" placeholder="验证码">
+                            <span class="form-line"></span>
+                            <a id="vCode-word">获取验证码</a>
+                        </div>
+                        <input type="button" id="next-one" value="下一步">
+                </div>
+                    
+                        
+                        <div class="pwd-box">
+                           <h5 class="word-two">密码长度为8-16位，至少包含字母、数字和符号中的两种类型，且不可与账号相同</h5>
+                        <input type="text" id="password" name="pwd" placeholder="密码">
+                        <input type="submit" id="sub" value="提交"> 
+                        </div>
+                        
                 <div class="f-footer">
-                    <a href="">登录</a>
+                    <a href="login.html">登录</a>
                 </div>
             </div>
         </div>
         <div class="footer">
-                <div class="box">
-                        <div class="list-one">
-                            <ul>
-                                <li>关于魅族</li>
-                                <li>｜</li>
-                                <li>工作机会</li>
-                                <li>｜</li>
-                                <li>联系我们</li>
-                                <li>｜</li>
-                                <li>法律声明</li>
-                                <li>｜</li>
-                                <li>常见问题</li>
-                                <li>｜</li>
-                                <li>简体中文</li>
-                            </ul>
-                        </div>
-                        <div class="list-two">
-                            <ul>
-                                <li>客服热线</li>
-                                <li>400-788-3333</li>
-                                <li>在线客服</li>
-                            </ul>
-                        </div>
-                        <div class="list-three">
-                            <ul>
-                                <a href="" class="one-a"><li class="list-weibo"></li></a>
-                                <a href=""><li class="list-weixin"></li></a>
-                                <a href=""><li class="list-qzone"></li></a>
-                            </ul>
-                        </div>
-                        <div>
-                            <img src="image/20190323161126.png" alt="">
-                        </div>
-                    </div>
+            <div class="box">
+                <div class="list-one">
+                    <ul>
+                        <li>关于魅族</li>
+                        <li>｜</li>
+                        <li>工作机会</li>
+                        <li>｜</li>
+                        <li>联系我们</li>
+                        <li>｜</li>
+                        <li>法律声明</li>
+                        <li>｜</li>
+                        <li>常见问题</li>
+                        <li>｜</li>
+                        <li>简体中文</li>
+                    </ul>
+                </div>
+                <div class="list-two">
+                    <ul>
+                        <li>客服热线</li>
+                        <li>400-788-3333</li>
+                        <li>在线客服</li>
+                    </ul>
+                </div>
+                <div class="list-three">
+                    <ul>
+                        <a href="" class="one-a">
+                            <li class="list-weibo"></li>
+                        </a>
+                        <a href="">
+                            <li class="list-weixin"></li>
+                        </a>
+                        <a href="">
+                            <li class="list-qzone"></li>
+                        </a>
+                    </ul>
+                </div>
+                <div>
+                    <img src="image/20190323161126.png" alt="">
+                </div>
+            </div>
         </div>
     </div>
+    <script src="jquery.min.js"></script>
+    <script src="js/register.js"></script>
+    <script>
+    $("#reg").click(function(){
+        $(".vCode-box").show()
+    });
+    $(".next-box").click(function(){
+        $(".pwd.box").show()
+    })
+    </script>
+
 </body>
 
 </html>
