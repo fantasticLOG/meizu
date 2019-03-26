@@ -127,13 +127,13 @@
             var obj = {
                 telephone
             }
-            sendAjax('php/register1.php', 'get', obj, data => {
+            sendAjax('php/Verification.php', 'get', obj, data => {
                 // 所期待的data应该是一个正确的json字符串
                 data = JSON.parse(data);
                 if(data.code == 200) {
-                    alert('可用');
+                    alert('用户名可用');
                 } else {
-                    alert(' 不可用');
+                    alert('用户名不可用');
                 }
             });
 
