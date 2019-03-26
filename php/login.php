@@ -1,5 +1,5 @@
 <?php
-$uname=$_POST["uname"];
+$tel=$_POST["telephone"];
 $pwd=$_POST["pwd"];
 $coon=mysqli_connect("localhost","root","","k");
 $result=mysqli_query($coon,$selectsql);

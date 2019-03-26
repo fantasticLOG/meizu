@@ -11,7 +11,7 @@ $().ready(function() {
 	      uname: {
 	        required: true,
             minlength: 2,
-            maxlength:10
+            maxlength:11
 	      },
 	      pwd: {
 	        required: true,

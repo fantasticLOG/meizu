@@ -15,7 +15,7 @@
         </div>
         <div class="main">
             <div class="form">
-                <form action="php/register.php" method="POST" class="form-box">
+                <form action="php/register.php" method="get" class="form-box" onsubmit="false">
                     <div class="f-header">
                         <span>注册Flame账号</span>
                     </div>
@@ -91,6 +91,7 @@
     </div>
     <script src="jquery.min.js"></script>
     <script src="js/register.js"></script>
+    <script src="js/ajax1.0.0.js"></script>
     <script>
         $("#reg").click(function () {
             $(".login-box").toggle(
@@ -120,7 +121,23 @@
                 }
             }, 1000);
         });
-        
+        var $form = document.querySelector('.form-box');
+        $form['telephone'].onchange = function () {
+            var telephone = this.value;
+            var obj = {
+                telephone
+            }
+            sendAjax('php/register1.php', 'get', obj, data => {
+                // 所期待的data应该是一个正确的json字符串
+                data = JSON.parse(data);
+                if(data.code == 200) {
+                    alert('可用');
+                } else {
+                    alert(' 不可用');
+                }
+            });
+
+        }
     </script>
 
 </body>
