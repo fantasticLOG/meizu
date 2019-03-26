@@ -15,37 +15,35 @@
         </div>
         <div class="main">
             <div class="form">
-                <div class="f-header">
-
-                    <span>注册Flame账号</span>
-
-                </div>
                 <form action="php/register.php" method="POST" class="form-box">
-                    <input type="text" id="telephone" name="telephone" placeholder="手机号码" data-error="手机号格式不正确"><br>
-                    <span class="checkExistRong" id="checkExistPhone"></span>
-                    <input type="button" id="btn" value="点击按钮进行验证" style="color: #666">
-                    <input type="button" id="reg" value="注册">
-                </form>
-                <div class="vCode-box">
-                    <h5 class="word-one">我们已发送一条验证码至<span class="tel"></span>，请输入短信中的验证码</h3>
+                    <div class="f-header">
+                        <span>注册Flame账号</span>
+                    </div>
+                    <div class="login-box">
+                        <input type="text" id="telephone" name="telephone" placeholder="手机号码" data-error="手机号格式不正确"><br>
+                        <span class="checkExistRong" id="checkExistPhone"></span>
+                        <input type="button" id="btn" value="点击按钮进行验证" style="color: #666">
+                        <input type="button" id="reg" value="注册">
+                    </div>
+
+                    <div class="vCode-box">
+                        <h5 class="word-one">我们已发送一条验证码至<span class="tel"></span>，请输入短信中的验证码</h5>
                         <div id="code-box">
                             <input type="text" id="vCode" name="vCode" placeholder="验证码">
                             <span class="form-line"></span>
                             <a id="vCode-word">获取验证码</a>
                         </div>
                         <input type="button" id="next-one" value="下一步">
-                </div>
-                    
-                        
-                        <div class="pwd-box">
-                           <h5 class="word-two">密码长度为8-16位，至少包含字母、数字和符号中的两种类型，且不可与账号相同</h5>
-                        <input type="text" id="password" name="pwd" placeholder="密码">
-                        <input type="submit" id="sub" value="提交"> 
-                        </div>
-                        
-                <div class="f-footer">
-                    <a href="login.html">登录</a>
-                </div>
+                    </div>
+                    <div class="pwd-box">
+                        <h5 class="word-two">密码长度为8-16位，至少包含字母、数字和符号中的两种类型，且不可与账号相同</h5>
+                        <input type="password" id="password" name="pwd" placeholder="密码">
+                        <input type="submit" id="sub" value="提交">
+                    </div>
+                    <div class="f-footer">
+                        <a href="login.html">登录</a>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="footer">
@@ -94,12 +92,35 @@
     <script src="jquery.min.js"></script>
     <script src="js/register.js"></script>
     <script>
-    $("#reg").click(function(){
-        $(".vCode-box").show()
-    });
-    $(".next-box").click(function(){
-        $(".pwd.box").show()
-    })
+        $("#reg").click(function () {
+            $(".login-box").toggle(
+                function () {
+                    $(".vCode-box").toggle()
+                }
+            )
+        });
+        $("#next-one").click(function () {
+            $(".vCode-box").toggle(
+                function () {
+                    $(".pwd-box").toggle()
+                }
+            )
+        });
+        $("#reg").click(function () {
+            $(".tel").html($("#telephone").val());
+        })
+        $("#vCode-word").click(function () {
+            var time = 60;
+            var timer = setInterval(function () {
+                time--;
+                $("#vCode-word").text("" + time + "秒重新获取");
+                if (time == 0) {
+                    clearInterval(timer);
+                    $("#vCode-word").text("获取验证码");
+                }
+            }, 1000);
+        });
+        
     </script>
 
 </body>

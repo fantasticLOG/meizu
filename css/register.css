@@ -163,7 +163,7 @@ font-size: 14px;
     padding: 12px 0;
     height: 16px;
     border: 0;
-    width: 200px;
+    width: 175px;
     border: none;
     outline: none;
     padding-left: 20px;
@@ -194,7 +194,7 @@ font-size: 14px;
     display: inline-block;
     border-left: 1px solid #dadada;
     position: absolute;
-    right: 140px;
+    right: 190px;
     top: 5px;
 }
 #next-one{
