@@ -20,10 +20,9 @@
                         <span>注册Flame账号</span>
                     </div>
                     <div class="login-box">
-                        <input  type="text" id="telephone" name="telephone" placeholder="手机号码" data-error="手机号格式不正确"><br>
+                        <input type="text" id="telephone" name="telephone" placeholder="手机号码" data-error="手机号格式不正确"><br>
                         <span class="checkExistRong" id="checkExistPhone"></span>
                         <input type="button" id="btn" value="点击按钮进行验证" style="color: #666">
-                        <input type="text" disabled="true" id="btnCode" value="验证成功" style="color: green; border:1px solid green;text-align: center;display: none;">
                         <input type="button" id="reg" value="注册">
                     </div>
 
@@ -34,7 +33,6 @@
                             <span class="form-line"></span>
                             <a id="vCode-word">获取验证码</a>
                         </div>
-                        <span class="checkExistCode" id="checkExistCode"></span>
                         <input type="button" id="next-one" value="下一步">
                     </div>
                     <div class="pwd-box">
@@ -94,7 +92,53 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/register.js"></script>
     <script src="./js/ajax1.0.0.js"></script>
-    
+    <script>
+        $("#reg").click(function () {
+            $(".login-box").toggle(
+                function () {
+                    $(".vCode-box").toggle()
+                }
+            )
+        });
+        $("#next-one").click(function () {
+            $(".vCode-box").toggle(
+                function () {
+                    $(".pwd-box").toggle()
+                }
+            )
+        });
+        $("#reg").click(function () {
+            $(".tel").html($("#telephone").val());
+        })
+        $("#vCode-word").click(function () {
+            var time = 60;
+            var timer = setInterval(function () {
+                time--;
+                $("#vCode-word").text("" + time + "秒重新获取");
+                if (time == 0) {
+                    clearInterval(timer);
+                    $("#vCode-word").text("获取验证码");
+                }
+            }, 1000);
+        });
+        var $form = document.querySelector('.form-box');
+        $form['telephone'].onchange = function () {
+            var telephone = this.value;
+            var obj = {
+                telephone
+            }
+            sendAjax('../server/Verification.php', 'get', obj, data => {
+                // 所期待的data应该是一个正确的json字符串
+                data = JSON.parse(data);
+                if(data.code == 200) {
+                    alert('用户名可用');
+                } else {
+                    alert('用户名不可用');
+                }
+            });
+
+        }
+    </script>
 
 </body>
 
