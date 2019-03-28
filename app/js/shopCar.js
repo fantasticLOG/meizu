@@ -175,3 +175,16 @@ var shopCar = (function () {
         }
     }
 }())
+var cook = (function(){
+    return {
+        init(){
+            var str = document.cookie;
+            console.log(str);
+            console.log(1);
+            
+            if(document.cookie){
+
+            }
+        }
+    }
+}())

@@ -171,6 +171,19 @@
     <script src="./js/shopCar.js"></script>
     <script>
          shopCar.init();
+         var cook = (function(){
+            return {
+                init(){
+                var str = document.cookie;
+                str = str.split('=')
+                console.log(str);
+                if(document.cookie){
+                    $('.header-order em').html(str[1]);
+            }
+        }
+    }
+}())
+         cook.init();
     </script>
 </body>
 

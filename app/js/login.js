@@ -9,7 +9,7 @@ $btn.onclick = function () {
 		data = JSON.parse(data);
 		if (data.code == 200) {
 			alert('登录成功');
-			document.cookie = `id=${data.data.id}`;
+			document.cookie = `user=${obj.username}`;
 			location.href = "../index.html";
 		} else {
 			alert(data.msg);
