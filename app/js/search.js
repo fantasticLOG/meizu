@@ -1,64 +1,88 @@
-const search = (function () {
-    let  $timer,$input,$ulbox;
+var search =(function(){
+    let $box, $inp, $ulbox;
     return {
-        init(ele) {
-            $input = $('#sousuo-baidu');
-            $ulbox = $('.show-tips');
+        init(){
+            $box = $('.sousuo');
+            $inp = $box.children('.baidu');
+            $ulbox = $box.children('.show-tips');
+            
+            // this.getData();
             this.event();
         },
-        event() {
-            var self = this;
-            $input.on('focus', function () {
-                console.log('获取焦点');
+        event(){
+            const self = this;
+            $inp.on('focus',function(){
                 self.show();
+                self.getData($inp.attr(' '));
+                $box.animate({
+                    'height': $box.height() + $ulbox.height() + 'px'
+                })
             })
-            $input.on('click', function (e) {
+            $inp.on('input', function(){
+                if($inp.val() == ""){
+                    self.getData($inp.attr(' '));
+                    self.show();
+                }else{
+                    self.getData($inp.val());
+                    self.show();
+                }
+            })
+            $inp.on('click', function(e){
                 e.stopPropagation();
-            })
-            $input.on('input', function () {
-                if (this.val().trim() == '') {
-                    self.hidden();
-                } else {
-                    clearTimeout($timer);
-                    $timer = setTimeout(_ => {
-                        self.getData(this.val());
-                        self.show();
-                    }, 500)
+                if($inp.val() == ""){
+                    self.getData($inp.attr(' '));
+                    self.show();
+                }else{
+                    self.getData($inp.val());
+                    // self.hidden();
                 }
             })
-            // document.on('click' , function () {
-            //     self.hidden();
-            // })
-            $ulbox.on('click', function (e) {
-                // console.log(1);
-                console.log(e.target);
-                if (e.target.nodeName === 'LI') {
-                    $input.val() = e.target.html();
-                }
+            $ulbox.on('mouseleave',function(){
+                self.hidden();
+            })
+            $(document).on('click', function(){
+                self.hidden();
+            })
+            $ulbox.on('click', 'li',function(){
+                self.hidden();
+                $inp.val($(this).html());
+                self.getData($inp.val());
             })
         },
-        show() {
-            if ($input.val().trim() != '')
-                $ulbox.css('display', 'block')
-        },
-        hidden() {
-            $ulbox.css('display', 'none')
-        },
-        getData(val) {
-            const url = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su';
-            const data = {
+        getData(val){
+            const url = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su",
+            data = {
                 wd: val,
-                cb: "baidu.insertData"
+                cb: "search.insertData",
             }
-            sendJsonp(url, data);
+            $.ajax({type:"get", url, data, async:true, dataType:'jsonp', success:function(data) {
+            }
+            })
         },
         insertData(data) {
-            $ulbox.html('');
-            data.s.forEach(x => {
-                const $li = document.createElement('li');
-                $li.html('x');
+            $ulbox.html("");
+            for(let i = 0; i < 5; i++){
+                const $li = $('<li>');
+                $li.html(data.s[i])
                 $ulbox.append($li);
-            })
+            }
+    
+        },
+        show(){
+            if($inp.value != ''){
+                $box.animate({
+                    'height': 30 + $ulbox.height() + 'px'
+                })
+                $ulbox.css({
+                    'display': 'block'
+                })
+            }
+        },
+        hidden(){
+            $box.animate({
+                'height': 30 + 'px',
+            },100)
+            $ulbox.css('display' ,'none')
         }
     }
-})
+}());

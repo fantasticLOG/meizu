@@ -74,24 +74,45 @@ img {
     font-size: 24px;
     color: #fff; }
 
-.sousuo input {
-  width: 172px;
-  height: 30px;
-  border: 1px solid #d9d9d9;
-  border-radius: 18px;
-  margin: 24px 0 0 17px;
-  color: #919191;
-  font-size: 10px;
-  padding-left: 19px;
-  line-height: 30px;
-  float: left; }
-
-.sousuo a {
-  position: absolute;
-  top: 30px;
-  right: 128px; }
+.sousuo {
+  width: 170px;
+  margin: 25px 0 0 5px;
+  border: 1px solid #000;
+  float: left;
+  border-radius: 15px 15px;
+  position: relative;
+  background: #fff; }
+  .sousuo .show-tips {
+    position: absolute;
+    width: 100%;
+    left: -216px;
+    top: -5px;
+    height: 160px;
+    z-index: 2; }
+    .sousuo .show-tips li {
+      color: #999;
+      padding-left: 16px;
+      font-size: 12px;
+      line-height: 30px;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 126px;
+      text-overflow: ellipsis;
+      cursor: pointer; }
+      .sousuo .show-tips li:hover {
+        color: #00bfff; }
+  .sousuo .baidu {
+    border: none;
+    color: #999;
+    padding-left: 16px;
+    font-size: 12px;
+    line-height: 30px;
+    background: none; }
   .sousuo a i {
-    font-size: 14px; }
+    position: absolute;
+    top: 8px;
+    left: 150px;
+    color: #000; }
 
 .PersonalCenter a i {
   float: left;
@@ -105,7 +126,7 @@ img {
   position: absolute;
   text-align: center;
   top: 60px;
-  right: 40px;
+  right: 72px;
   background: #fff;
   display: none;
   z-index: 1; }
@@ -141,34 +162,43 @@ img {
     color: #fff;
     position: absolute;
     top: 24px;
-    right: 32px; }
+    right: 60px; }
 
-.nav {
+.nav-phone {
   width: 100%;
   float: left;
   display: none;
   position: absolute;
-  z-index: 20;
+  z-index: 10;
   background: #fff; }
-  .nav .phone_con {
-    height: 193px;
+  .nav-phone .app {
+    margin: 0 auto; }
+  .nav-phone .phone_con {
+    min-height: 193px;
     width: 1240px;
     margin: 0 auto; }
-    .nav .phone_con .phone-h_1 {
+    .nav-phone .phone_con a {
+      display: block;
+      width: 1240px;
+      height: 300px; }
+      .nav-phone .phone_con a img {
+        width: 100%;
+        height: 100%; }
+    .nav-phone .phone_con .phone-h_1 {
       display: block;
       width: 142px;
       height: 155px;
       text-align: center;
       float: left;
       margin: 20px 0 0 12px; }
-      .nav .phone_con .phone-h_1 img {
+      .nav-phone .phone_con .phone-h_1 img {
         width: 120px;
         height: 120px; }
-      .nav .phone_con .phone-h_1 .phone-name {
+      .nav-phone .phone_con .phone-h_1 .phone-name {
         font-size: 12px;
         color: #353535;
         line-height: 12px; }
-      .nav .phone_con .phone-h_1 .phone-price {
+      .nav-phone .phone_con .phone-h_1 .phone-price {
         font-size: 12px;
         color: #353535;
         line-height: 12px; }

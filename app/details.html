@@ -7,54 +7,61 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>商品详情</title>
     <link rel="stylesheet" href="./css/details.css">
-    <link rel="stylesheet" href="./css/public.css">
     <link rel="stylesheet" href="./iconfont/iconfont.css">
     <link rel="stylesheet" href="./css/city.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_732107_mqsg6hqcwhj.css">
     <link rel="stylesheet" href="./css/model.css">
-    <style>
-            li {
-                float: right;
-            }
-    
-            .li1 {
-                background-color: aqua;
-            }
-        </style>
+    <link rel="stylesheet" href="./css/index.css">
+       
 </head>
 
 <body>
     <!-- header -->
     <div id="header">
-        <div class="header-con">
-            <div class="logo"></div>
-            <ul>
-                <li><a href="">手机</a></li>
-                <li><a href="">声学</a> </li>
-                <li><a href="">配件</a> </li>
-                <li><a href="">生活</a> </li>
-                <li><a href="">Flyme</a></li>
-                <li><a href="">服务</a> </li>
-                <li><a href="">专卖店</a> </li>
-                <li><a href="">社区</a> </li>
-                <li><a href="">APP下载</a> </li>
-            </ul>
-            <div class="sousuo">
-                <input id="name"  type="text" value="" placeholder="魅族 Note9">
-                <ul id="ul1" style="border: 1px solid red;display: none;width: 338px;list-style: none;margin-top: 0px;">
+            <div class="show-header">
+            <div class="header-con">
+                <div class="logo">
+                    <i class="iconfont icon-meizu"></i>
+                </div>
+                <ul class="frist-ul">
+                    <li class="frist-li"><a href="" class="phone-h">手机</a></li>
+                    <li class="shengxue-h"><a href="" >声学</a> </li>
+                    <li class="peijian-h"><a href="">配件</a> </li>
+                    <li class="life-h"><a href="">生活</a> </li>
+                    <li class="flyme-h"><a href="">Flyme</a></li>
+                    <li class="fuwu-h"><a href="">服务</a> </li>
+                    <li class="zhuanmai-h"><a href="">专卖店</a> </li>
+                    <li class="shequ-h"><a href="">社区</a> </li>
+                    <li class="app-h"><a href="">APP下载</a> </li>
+                </ul>
+                <div class="sousuo">
+                    <input type="text" value="" placeholder="" class="baidu">
+                    <ul class="show-tips">
                     </ul>
-                <a href="./search.html"><i class="iconfont icon-search"></i></a>
+                    <a href="./details.html"><i class="iconfont icon-search"></i></a>
+                </div>
+                <div class="PersonalCenter">
+                    <a href=""><i class="iconfont icon-touxiang"></i></a>
+                    <span id="center">
+                        <a href="./login.html" class="login-ye">立即登录</a></br> 
+                        <a href="./register.html" class="regiter-ye">立即注册</a></br> 
+                        <a href="" class="dingdan">我的订单</a> </br>
+                        <a href="" class="mm">M码通道</a>
+                        <i class="iconfont icon-triangle"></i>
+                    </span> 
+                </div>
+                <div class="shopCar">
+                    <a href=""><i class="iconfont icon-gouwuche1"></i></a>
+                    <em>0</em>
+                </div>
             </div>
-            <div class="PersonalCenter">
-                <a href=""><i class="iconfont icon-touxiang"></i></a>
             </div>
-            <div class="shopCar">
-                <a href=""><i class="iconfont icon-gouwuche1"></i></a>
-                <em>0</em>
+    
+            <!-- nav -->
+            <div class="nav-phone">
             </div>
         </div>
-    </div>
-
+    <div class="nav-box"></div>
     <!-- fast-nav -->
     <div id="fast-nav">
         <div class="fast-nav-cont">
@@ -72,8 +79,16 @@
     <div id="container">
         <div class="row-container">
             <div class="preview">
-                <div class="preview-booth">
-                    <img class="big-img" src="./images/note9-1.jpg" alt="">
+                <div class="smallBox">
+                    <div class="tool"></div>
+                    <div class="preview-booth smallImg">
+                        <img class="big-img" src="./images/note9-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="bigBox">
+                    <div class="bigImg">
+                        <img class="big-img" src="./images/note9-1.jpg" alt="">
+                    </div>
                 </div>
                 <ul class="preview-thumb">
                     <li><a href="javascript:void(0);"><img src="./images/note9-1.jpg" alt=""></a></li>
@@ -247,27 +262,27 @@
             <div class="first">
                 <ul>
                     <li>
-                        <a href=""><img src="./images/1_03.jpg" alt=""></a>
+                        <a href=""><img src="images/1_03.jpg" alt=""></a>
                         <p>满80免运费</p>
                     </li>
                     <li>
-                        <a href=""><img src="./images/2_03.jpg" alt=""></a>
+                        <a href=""><img src="images/2_03.jpg" alt=""></a>
                         <p>100+城市次日送达</p>
                     </li>
                     <li>
-                        <a href=""><img src="./images/3_03.jpg" alt=""></a>
+                        <a href=""><img src="images/3_03.jpg" alt=""></a>
                         <p class="seven">7天无理由退货</p>
                     </li>
                     <li>
-                        <a href=""><img src="./images/4_03.jpg" alt=""></a>
+                        <a href=""><img src="images/4_03.jpg" alt=""></a>
                         <p>15天换货保障</p>
                     </li>
                     <li>
-                        <a href=""><img src="./images/5_03.jpg" alt=""></a>
+                        <a href=""><img src="images/5_03.jpg" alt=""></a>
                         <p>1年免费保修</p>
                     </li>
                     <li>
-                        <a href=""><img src="./images/6_03.jpg" alt=""></a>
+                        <a href=""><img src="images/6_03.jpg" alt=""></a>
                         <p>上门快修</p>
                     </li>
                 </ul>
@@ -275,7 +290,7 @@
                     <span>
                         周一至周日:7:30-24:00
                     </span>
-                    <h5>
+                    <h5 style="font-size:21px">
                         400-788-3333
                     </h5>
                     <a href="">在线客服</a>
@@ -330,6 +345,8 @@
 <script src="./js/Popt.js"></script>
 <script src="./js/details.js"></script>
 <script src="./js/model.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/glass.js"></script>
 <script type="text/javascript">
     $("#city").click(function (e) {
         SelCity(this, e);
@@ -337,19 +354,9 @@
     });
 </script>
 
-<script type="text/javascript" language="javascript">
-    $(document).ready(function () {
-        $(".btn-empty").click(function () {
-            if($('.model').children().is('.model-style') && $('.network-type').children().is('.model-style') && $('.color-classification').children().is('.model-style') && $('.memory-capacity').children().is('.model-style') && $('.package').children().is('.model-style') && $('.periodization').children().is('.model-style')){
-                var model = new Model();
-                model.success();
-            }else{
-                var model = new Model();
-                model.error();
-            }
-        });
-    }); 
-</script>
 
+<script>
+    index.init('.header-con');
+</script>
 
 </html>
