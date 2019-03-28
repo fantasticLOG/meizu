@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin:*");
 $telephone=$_GET["telephone"];
 $sql = "select id from tel where phone='$telephone'";
         include('connet_db.php');
