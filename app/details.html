@@ -51,8 +51,8 @@
                     </span> 
                 </div>
                 <div class="shopCar">
-                    <a href=""><i class="iconfont icon-gouwuche1"></i></a>
-                    <em>0</em>
+                    <a href="./shopCar.html"><i class="iconfont icon-gouwuche1"></i></a>
+                    <em class="show-num">0</em>
                 </div>
             </div>
             </div>
@@ -152,7 +152,7 @@
                     <dd class="clearfix model">
                         <a href="javascript:void(0);" title="魅族 16th">魅族 16th</a>
                         <a href="javascript:void(0);" title="魅族 16th Plus">魅族 16th Plus</a>
-                        <a href="javascript:void(0);" title="魅族 16 ">"魅族 16 X"</a>
+                        <a href="javascript:void(0);" title="魅族 16 ">魅族 16 X</a>
                         <a href="javascript:void(0);" title="魅族 V8 高配">魅族 V8 高配版</a>
                         <a href="javascript:void(0);" title="魅族 X8">魅族 X8</a>
                         <a href="javascript:void(0);" title="魅族 Note9">魅族 Note9</a>
@@ -346,7 +346,10 @@
 <script src="./js/details.js"></script>
 <script src="./js/model.js"></script>
 <script src="./js/index.js"></script>
+<script src="./js/search.js"></script>
 <script src="./js/glass.js"></script>
+<script src="./js/getData.js"></script>
+<script src="./js/shopCar.js"></script>
 <script type="text/javascript">
     $("#city").click(function (e) {
         SelCity(this, e);
@@ -357,6 +360,8 @@
 
 <script>
     index.init('.header-con');
+    shopCar.init();
+    search.init();
 </script>
 
 </html>

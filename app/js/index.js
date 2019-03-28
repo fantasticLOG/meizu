@@ -7,6 +7,7 @@ var index = (function (el) {
             $liAll = $($ul).children($("li"));//获取所有li
             $aAll = $($liAll).children($("a"));//获取所有a
             this.event();
+            this.nullShopCar();
         },
         event() {
             var self = this;
@@ -410,5 +411,15 @@ var index = (function (el) {
                         $aAll.css('color', '#fff');
                     });
         },
+        nullShopCar(){
+            var data = localStorage.shopList || '[]';
+            let small_shop = JSON.parse(data).length
+            console.log(JSON.parse(data).length);
+            if(small_shop == 0){
+                $('.shopCar a').attr('href','./car-null.html');
+            }else{
+                $('.shopCar a').attr('href','./shopCar.html');
+            }
+        }
     }
 }());

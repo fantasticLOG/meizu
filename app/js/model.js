@@ -35,7 +35,7 @@ function create (element, className) {
           $body.innerHTML = `${content}`;
           $box.style.display = 'flex';
         },
-        success(content = '<a href="./car-null.html"> 去购物车结算 ></a>') {
+        success(content = '<a href="./shopCar.html"> 去购物车结算 ></a>') {
           this.show({title: '已成功加入购物车', content, type: 'success'})
         },
         info(content = '这是一个提示') {

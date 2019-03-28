@@ -89,7 +89,8 @@ img {
     top: -5px;
     height: 160px;
     z-index: 2; }
-    .sousuo .show-tips li {
+    .sousuo .show-tips a {
+      display: block;
       color: #999;
       padding-left: 16px;
       font-size: 12px;

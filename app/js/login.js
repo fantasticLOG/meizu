@@ -5,12 +5,12 @@ $btn.onclick = function () {
 		username: $from['username'].value,
 		password: $from['password'].value
 	}
-	sendAjax('../server/validateLogon.php', 'POST', obj, data => {
+	sendAjax('http://10.36.145.202:4396/meizu/server/validateLogon.php', 'POST', obj, data => {
 		data = JSON.parse(data);
 		if (data.code == 200) {
 			alert('登录成功');
 			document.cookie = `id=${data.data.id}`;
-			location.href = "../app/home.html";
+			location.href = "../index.html";
 		} else {
 			alert(data.msg);
 		}

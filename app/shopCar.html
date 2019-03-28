@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./iconfont/iconfont.css">
     <link rel="stylesheet" href="./css/public.css">
     <link rel="stylesheet" href="./css/car-null.css">
+    <link rel="stylesheet" href="./css/shopCar.css">
     <title>购物车</title>
 </head>
 
@@ -42,7 +43,44 @@
     <div id="main">
         <div class="main-cont">
             <div class="shop-title">
-                <input type="checkbox">全选
+                <input class="title-checkbox" type="checkbox">全选
+                <span class="title-price">单价(元)</span>
+                <span class="title-count">数量</span>
+                <span class="title-xiaoji">小计(元)</span>
+                <a href=""><span class="title-bj">编辑</span></a>
+            </div>
+            <div class="shop-phone">
+                <!-- <div class="phone-title">
+                    <p>加价购</p>
+                    <span>另外再加19元起，即可换购超值商品</span>
+                    <a href="">立即加购 ></a>
+                </div>
+                <div class="phone-show">
+                    <input class="phone-checkbox" type="checkbox">
+                    <a class="phone-img" href=""><img src="./images/note9-1.jpg" alt=""></a>
+                    <div class="phone-box">
+                        <h4 class="phone-name">魅族 Note9</h4>
+                        <p class="phone-parameter">全网通公开版 幻黑 4+64GB</p>
+                    </div>
+                    <div class="phone-show-price">
+                        <em>￥<i class="phone-price">1398</i></em>
+                    </div>
+                    <div class="phone-show-count">
+                            <a href="javascript:void(0);" title="减少" class="count-minus">-</a>
+                            <input class="phone-inp" type="text" value="1">
+                            <a href="javascript:void(0);" title="增加" class="count-push">+</a>
+                    </div>
+                    <div class="phone-show-subtotal">
+                        <em>￥<i class="phone-subtotal">1398</i></em>
+                    </div>
+                    <div class="phone-del">
+                        <button class="del">删除</button>
+                    </div>
+                </div> -->
+            </div>
+            <div class="shop-total-price">
+                <em>总价<i class="shop-total">0</i>元</em>
+                <a href=""><div class="shop-price-go">去结算</div></a>
             </div>
         </div>
     </div>
@@ -129,6 +167,11 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.js"></script>
+    <script src="./js/shopCar.js"></script>
+    <script>
+         shopCar.init();
+    </script>
 </body>
 
 </html>

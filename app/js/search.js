@@ -62,7 +62,7 @@ var search =(function(){
         insertData(data) {
             $ulbox.html("");
             for(let i = 0; i < 5; i++){
-                const $li = $('<li>');
+                const $li = $('<a href ="./details.html"></a>');
                 $li.html(data.s[i])
                 $ulbox.append($li);
             }

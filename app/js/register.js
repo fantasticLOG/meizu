@@ -49,10 +49,15 @@ $("#next-one").click(function () {
         $(".pwd-box").toggle()
     })
 })
-
+$(".pwd-box").click(function(){
+    if($("#password").val().length==0){
+        
+    }
+})
 $("#reg").click(function () {
     $(".tel").html($("#telephone").val());
 })
+
 $("#vCode-word").click(function () {
     var time = 60;
     var timer = setInterval(function () {
@@ -65,19 +70,22 @@ $("#vCode-word").click(function () {
     }, 1000);
 });
 var $form = document.querySelector('.form-box');
-var $btn=document.querySelector("#btn");
-$btn.onclick = function () {
+$form['telephone'].onchange = function() {
     var telephone = this.value;
     var obj = {
         telephone
     }
-    sendAjax('../server/Verification.php', 'get', obj, data => {
+    sendAjax('http://10.36.145.202:4396/meizu/server/Verification.php', 'get', obj, data => {
         // 所期待的data应该是一个正确的json字符串
         data = JSON.parse(data);
         if (data.code == 200) {
             alert('用户名可用');
+            $("#reg").removeAttr("disabled");
+            $("#reg").css("background","#387aff");
         } else {
             alert('用户名不可用');
+            $("#reg").attr("disabled","disabled");
+            $("#reg").css("background","#ccc");
         }
     });
 }

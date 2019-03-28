@@ -5,16 +5,16 @@ var a3 = $('.twelve').html();
 var a4 = $('.six-i').html();
 var a5 = $('.twelve-i').html();
 $('.vm-minus').click(function () {
-    var num = $('.inp').val();
-    if (num > 1) {
-        num--;
+    var vm_num = $('.inp').val();
+    if (vm_num > 1) {
+        vm_num--;
         $('.vm-minus').css('color', '#000')
     } else {
-        num = 1;
+        vm_num = 1;
         $('.vm-minus').css('color', '#e0e0e0');
         $('.vm-push').css('color', '#000');
     }
-    $('.inp').val(num);
+    $('.inp').val(vm_num);
     var b = $('.inp').val();
     var c1 = (a1 * b).toFixed(2);
     var c2 = (a2 * b).toFixed(2);
@@ -28,16 +28,16 @@ $('.vm-minus').click(function () {
     $('.twelve-i').html(c5);
 })
 $('.vm-push').click(function () {
-    var num = $('.inp').val();
-    if (num >= 5) {
-        num = 5;
+    var vm_num = $('.inp').val();
+    if (vm_num >= 5) {
+        vm_num = 5;
         $('.vm-push').css('color', '#e0e0e0');
         $('.vm-minus').css('color', '#000');
     } else {
-        num++;
+        vm_num++;
         $('.vm-push').css('color', '#000');
     }
-    $('.inp').val(num);
+    $('.inp').val(vm_num);
     var b = $('.inp').val();
     var c1 = (a1 * b).toFixed(2);
     var c2 = (a2 * b).toFixed(2);
@@ -126,15 +126,7 @@ $('.preview-thumb').on('click','img',function(){
             if ($('.model').children().is('.model-style') && $('.network-type').children().is('.model-style') && $('.color-classification').children().is('.model-style') && $('.memory-capacity').children().is('.model-style') && $('.package').children().is('.model-style') && $('.periodization').children().is('.model-style')) {
                 var model = new Model();
                 model.success();
-                //获取
-                var obj = {}
-                obj.name = $(".model").children(".model-style").html();
-                obj.type = $(".network-type").children(".model-style").html();
-                obj.color = $(".color-classification").children(".model-style").html();
-                obj.memory = $(".memory-capacity").children(".model-style").html();
-
-                obj.count = $('.span-num').html() - 0;
-                shopData = obj;
+                getData.init();
 
             } else {
                 var model = new Model();
@@ -142,6 +134,8 @@ $('.preview-thumb').on('click','img',function(){
             }
         });
     }); 
+
+    
      
 
 

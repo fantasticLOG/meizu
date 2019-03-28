@@ -15,7 +15,7 @@
         </div>
         <div class="main">
             <div class="form">
-                <form action="../server/register.php" method="get" class="form-box" onsubmit="false">
+                <form action="http://10.36.145.202:4396/meizu/server/register.php" method="GET" class="form-box" >
                     <div class="f-header">
                         <span>注册Flame账号</span>
                     </div>
@@ -24,7 +24,7 @@
                         <span class="checkExistRong" id="checkExistPhone"></span>
                         <input type="button" id="btn" value="点击按钮进行验证" style="color: #666">
                         <input type="text" disabled="true" id="btnCode" value="验证成功" style="color: green; border:1px solid green;text-align: center;display: none;">
-                        <input type="button" id="reg" value="注册">
+                        <input type="button"  id="reg" value="注册">
                     </div>
 
                     <div class="vCode-box">
@@ -40,6 +40,7 @@
                     <div class="pwd-box">
                         <h5 class="word-two">密码长度为8-16位，至少包含字母、数字和符号中的两种类型，且不可与账号相同</h5>
                         <input type="password" id="password" name="pwd" placeholder="密码">
+                        <span class="checkExistCode" id="checkExistCode"></span>
                         <input type="submit" id="sub" value="提交">
                     </div>
                     <div class="f-footer">

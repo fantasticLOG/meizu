@@ -1,69 +1,48 @@
-@charset "UTF-8";
-html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input {
-  margin: 0;
-  padding: 0; }
+@charset "utf-8";
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input{margin: 0;padding: 0;}
+ul,ol,li{list-style: none;}
+a,u{text-decoration: none;}
+b,strong{font-weight: normal;}
+em,i{font-style: normal;}
+h1,h2,h3,h4,h5,h6{font-size: 16px;font-weight: normal;}
+input{outline: none;}
+img{display: block;border: 0;}
+body{font-family: "微软雅黑"};
 
-a, u {
-  text-decoration: none; }
+#main{width: 100%;height: 900px; background-color: red;}
+.main-cont{min-height: 420px;width:1240px;margin: 0 auto;}
+.shop-title{height: 49px;border-bottom: 1px solid #ccc;background: #fff;}
+.title-checkbox{font-size: 14px;color: #333;}
+.shop-title span{font-size: 12px;color: rgba(51,51,51,.4);line-height: 49px;}
+.title-price{margin-left:538px;}
+.title-count{margin-left:165px; }
+.title-xiaoji{margin-left: 138px;}
+.title-bj{margin-left: 136px;color: #00c3f5;}
 
-em, i {
-  font-style: normal; }
+.shop-phone{min-height: 189px;border-bottom: 1px solid #ccc;}
+.phone-title{height: 40px;padding-top: 18px;}
+.phone-title p{float: left;border: 1px solid red;color: red;font-size: 12px;padding: 5px;}
+.phone-title span{font-size: 12px;color: #595959;float: left;margin-left:15px;line-height:30px;}
+.phone-title a{float: left; color: #00c3f5;font-size:12px;margin-left: 10px;line-height:30px;}
 
-b, strong {
-  font-weight: normal; }
+.phone-checkbox{float: left;margin-top: 40px;}
+.phone-show{height:200px ;}
+.phone-show .phone-img{float: left; display: block;width: 100px;height: 100px;margin-left:40px; }
+.phone-show a img{width: 100%;height: 100%;}
+.phone-box{float: left;margin-top: 30px;margin-left: 10px;}
+.phone-box .phone-name{font-size: 16px;color: #262626;text-align: center}
+.phone-box .phone-parameter{font-size: 14px;color: #8C8C8C;margin-top: 4px;} 
+.phone-show-price{float: left;margin-top: 35px;margin-left: 250px;color: #666;}
 
-ul, ol, li {
-  list-style: none; }
+.phone-show-count{float: left;width: 200px;text-align: center;margin-top: 30px;margin-left: 130px}
+.count-minus,.count-push{display: block; float: left;width:24px;height: 24px;text-align: center;border:1px solid #ccc; color: gray;}
+.phone-inp{display: block; float: left;width: 35px;height: 22px;text-align: center;}
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 16px;
-  font-weight: normal; }
+.phone-show-subtotal{float: left;color: red;margin-top: 30px;}
 
-body {
-  font-family: "微软雅黑"; }
+.phone-del{float: left;width: 60px;height: 20px;color: red;text-align: center;line-height: 30px;margin-top:30px;margin-left: 50px; }
 
-input {
-  outline: none; }
-
-img {
-  border: 0;
-  display: block; }
-
-.clear_fix {
-  zoom: 1; }
-  .clear_fix:after {
-    content: ".";
-    clear: both;
-    display: block;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden; }
-
-#header {
-  background: #fff; }
-
-.header-cont {
-  height: 80px;
-  border-bottom: 1px solid #efefef; }
-  .header-cont .icon-meizu {
-    float: left;
-    font-size: 23px;
-    color: #00b4ff;
-    line-height: 80px; }
-  .header-cont .header-li {
-    float: left;
-    margin-left: 55px; }
-    .header-cont .header-li a {
-      display: block;
-      float: left;
-      font-size: 14px;
-      color: #333;
-      line-height: 80px; }
-  .header-cont .header-order {
-    float: right; }
-    .header-cont .header-order a {
-      float: left;
-      font-size: 14px;
-      color: #333;
-      line-height: 80px;
-      margin-left: 40px; }
+.shop-total-price{height: 70px;margin-top: 10px;}
+.shop-total-price em{float: left;font-size: 12px;color: #595959;margin-left: 960px;}
+.shop-total-price em .shop-total{font-size: 20px;color: red;}
+.shop-price-go{float: left; width: 98px;height: 34px;background: #F66567;font-size:14px;color: #fff; text-align: center;line-height: 34px;margin-left: 50px;}
